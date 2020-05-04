@@ -1,0 +1,331 @@
+body{
+    font:15px Cooper Black,Informal Roman,sans-serif;
+    padding:0;
+    margin:0;
+    background-color:#ffffbf;
+}
+
+/*Estilos Globales*/
+
+/*
+redondear las puntas de una caja
+
+border-radius: 62px 62px 62px 62px;
+-moz-border-radius: 62px 62px 62px 62px;
+-webkit-border-radius: 62px 62px 62px 62px;
+border: 0px solid #000000;
+*/
+
+.titulotextos{
+   font-family: arial, sans-serif;
+  color: #2B2B2B;
+  font-size: 20px;
+}
+.mistextos {
+  font-family: "lucida sans unicode", "lucida grande", sans-serif;
+  color: #2B2B2B;
+  font-size: 15px;
+}
+
+}
+
+html, body {
+   margin: 0;
+   padding: 0;
+}
+#outer {
+   margin: 5em;
+   border: 1px solid #f00;
+}
+#inner {
+   width: 6em;
+   height: 4em;
+   background-color: #999;
+}
+
+.Contenedor{
+	width:90%;
+	margin:auto;
+	overflow:hidden;
+
+}
+
+ul{
+	margin:0;
+	padding:0;
+}
+
+.boton1{
+	height:30px;
+	background:#ffffff;
+	border:5;
+	padding-left:80px;
+	padding-right:80px;
+	color:#000000;
+ }
+
+.oscuro{
+	padding:15px;
+	background:#F5A9A9;
+	color:#000000;
+	margin-top:60px;
+	margin-bottom:200px;
+
+	 border-radius: 35px 0px 35px 0px;
+-moz-border-radius: 35px 0px 35px 0px;
+-webkit-border-radius: 35px 0px 35px 0px;
+ }
+ /*
+.oscuro{
+	padding:15px;
+	background:#F5A9A9;
+	color:#000000;
+	margin-top:200px;
+	margin-bottom:200px;
+ }
+ */
+
+/*Encabezado*/
+   header{
+	background:#fdfd96;
+	color:#fdfd96;
+	padding-top:10px;
+	min-height:30px;
+	border-bottom:#FA5882 5px solid;
+ }
+
+ header{
+	color:#000000;
+	text-decoration:none;
+	text-transform:uppercase;
+	font-size:16px;
+ }
+
+ header li{
+	float:left;
+	display:inline;
+	padding:0  20px 0 20px;
+ }
+ header #marca{
+	float:left;
+ }
+
+ header #marca h1{
+	margin:0;
+ }
+
+ header nav{
+	float:right;
+	margin-top:5px;
+ }
+ header .resaltado, header  .actual a{
+	color:#ffd11a;
+	font-weight:bold;
+ }
+ header a:hover;{
+	color:#ffd11a;
+	font-weight:bold;
+ }
+
+/*cabecera con imagenes*/
+#cabecera{
+	min-height:380px;
+	background:url('../reposteria/portadaabuelita.jpg') no-repeat;
+	background-size: cover;
+	position: relative;
+	display: flex;
+	flex-flow: row;
+
+
+	text-align:center;
+	color:#ffff00;
+ }
+ #cabecera h1;{
+ 	margin-top:800px;
+ 	font-size:90px;
+ 	margin-bottom:15px;
+ }
+
+ #cabecera p{
+ 	font-size:80px;
+ }
+
+ /*formularios*/
+ #boletin{
+ 	padding:17px;
+ 	color:#;		/* --------------------->                NO SE QUE TIENEN PUESTO AQUI .. LO VI */
+ 	background:#F7FE2E;
+ }
+ #boletin h1{
+ 	float:left;
+ }
+ #boletin form{
+ 	float:right;
+ 	margin-top:15px;
+ 	color:#000000;
+ }
+
+ #boletin input[type="Email"]{
+ 	padding:4px;
+ 	height:25px;
+ 	width:250px;
+ }
+ /*Cajas*/
+ #cajas{
+ 	margin-top:20px;
+ }
+ #cajas .caja{
+ 	float:left;
+ 	text-align: center;
+ 	width:30%;
+ 	padding:10px;
+ }
+ #cajas .caja img{
+ 	width:90px;
+ }
+ /*Lateral*/
+ aside#lateral{
+ 	float:right;
+ 	width:30%;
+ 	margin-top:10px;
+ }
+ /*Main-col*/
+ article#main-col{
+ 	float:left;
+ 	width:65%;
+ }
+ /*Servicios*/
+ ul#servicios li{
+ 	list-style: none;
+ 	padding:20px; /*EL TEXTO NO SE PEGA A LA CAJA*/
+ 	border:#94dbff solid 2px;
+ 	box-shadow:2px 2px 14px #623B80;
+ 	margin-bottom:10px;
+ 	background:#e0e0eb;
+
+ border-radius: 35px 0px 35px 0px;
+-moz-border-radius: 35px 0px 35px 0px;
+-webkit-border-radius: 35px 0px 35px 0px;
+
+ }
+ footer{
+ 	padding:30px;
+ 	margin-top:30px;
+ 	color:#000000;
+ 	background-color:#1a75ff;
+ 	text-align:center;
+
+ 	 border-radius: 35px 0px 35px 0px;
+-moz-border-radius: 35px 0px 35px 0px;
+-webkit-border-radius: 35px 0px 35px 0px;
+ }
+ 
+ /*Estilos para el formulario de contacto*/
+ input,textarea{
+ 	width:100%;
+ 	height:5%;
+ 	border:1px solid gray;
+ 	margin-bottom:2px;
+ }
+ textarea{
+ 	height:100px;
+ }
+
+ input[type='submit']{
+ 	background-color:#778899;
+ 	color:#000000;
+ }
+ /*Media Queries*/
+ @media(max-width:768px){
+ 	header#marca,
+ 	header nav,
+ 	header nav li,
+ 	#boletin h1,
+ 	#boletin form,
+ 	#cajas .caja,
+ 	article#main-col,
+ 	aside#lateral{
+ 		float:none;
+ 		text-align:center;
+ 		width:100%;
+ }
+ header{
+       padding-bottom:20px;
+ }
+ #boletin h1{
+ 	margin-top:40px;
+ }
+ #boletin button{
+ 	display:block;
+ 	width:100%;
+ }
+ #boletin form input[type="email"]{
+ 	width:100%;
+ 	margin bottom:5px;
+ }
+ input, textarea{
+ 	width:98%;
+ }
+ }
+ 
+/* CSS Document */
+body {
+    font:12px arial;
+    color: #222;
+    text-align:center;
+    padding:35px; }
+  
+form, p, span {
+    margin:0;
+    padding:0; }
+  
+input { font:12px arial; }
+  
+a {
+    color:#0000FF;
+    text-decoration:none; }
+  
+    a:hover { text-decoration:underline; }
+  
+#wrapper, #loginform {
+    margin:0 auto;
+    padding-bottom:25px;
+    background:#EBF4FB;
+    width:504px;
+    border:1px solid #ACD8F0; }
+  
+#loginform { padding-top:18px; }
+  
+    #loginform p { margin: 5px; }
+  
+#chatbox {
+    text-align:left;
+    margin:0 auto;
+    margin-bottom:25px;
+    padding:10px;
+    background:#fff;
+    height:270px;
+    width:430px;
+    border:1px solid #ACD8F0;
+    overflow:auto; }
+  
+#usermsg {
+    width:395px;
+    border:1px solid #ACD8F0; }
+  
+#submit { width: 60px; }
+  
+.error { color: #ff0000; }
+  
+#menu { padding:12.5px 25px 12.5px 25px; }
+  
+.welcome { float:left; }
+  
+.logout { float:right; }
+  
+.msgln { margin:0 0 2px 0; }
+
+/* ENTRADA DE IMAGEN*/
+
+
+/*fin de entrada de imagen*/
