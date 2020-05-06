@@ -2,7 +2,8 @@ body{
     font:15px Cooper Black,Informal Roman,sans-serif;
     padding:0;
     margin:0;
-    background-color:#ffffbf;
+    background-image: url("../reposteria/hh.jpg");
+
 }
 
 /*Estilos Globales*/
@@ -16,12 +17,18 @@ border-radius: 62px 62px 62px 62px;
 border: 0px solid #000000;
 */
 
+label {
+	   font-family: arial, sans-serif;
+  color: #2B2B2B;
+  font-size: 20px;
+}
+
 .titulotextos{
    font-family: arial, sans-serif;
   color: #2B2B2B;
   font-size: 20px;
 }
-.mistextos {
+p {
   font-family: "lucida sans unicode", "lucida grande", sans-serif;
   color: #2B2B2B;
   font-size: 15px;
