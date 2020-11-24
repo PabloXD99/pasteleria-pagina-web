@@ -332,7 +332,91 @@ a {
   
 .msgln { margin:0 0 2px 0; }
 
+table#catalogo{
+	width: 100%;
+	border-spacing: 5px;
+	padding: 1px;
+}
+
+table#catalogo, th#catalogo, td#catalogo{
+	border: 3px solid rgba(27, 24, 24, 0.795);
+	border-collapse: collapse;
+}
+th#catalogo{
+	font-size: 45px;
+	font-family: cursive;
+	color: rgb(16, 88, 221);
+}
+
+td#catalogo{
+	font-size: 30px;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+th#catalogo, td#catalogo {
+	padding: 55px;
+}
+
+h1#catalogo{
+	font-size: 45px;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	border-style: dotted;
+	border-width: thick;
+}
+
+.btncomprar{
+	position: relative;
+	display: block;
+	color: rgb(10, 7, 7);
+	font-size: 14px;
+	font-family: "montserrat";
+	text-decoration: none;
+	margin: 30px 0;
+	border: 2px solid #ff7675;
+	padding: 14px 50px;
+	text-transform: uppercase;
+	overflow: hidden;
+	transition: 1s all ease;
+}
+
+.btncomprar::before{
+	background: #ff7675;
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	z-index: -1;
+	transition: all 0.6s ease;
+}
+
+.btn::before{
+	width: 100%;
+	height: 0;
+	transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.btn:hover::before{
+	height: 420%;
+}
+
+
+aside#latcomprar{
+	float: right;
+	width: 35%;
+	margin-top: 10px;
+	
+}
+
+#pagar h1{
+	font-size: 40px;
+}
+
+
 /* ENTRADA DE IMAGEN*/
 
 
 /*fin de entrada de imagen*/
+
+/* CSS Document */
+/*  TODO EL MENU*/
