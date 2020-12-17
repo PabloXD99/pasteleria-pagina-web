@@ -31,7 +31,7 @@ include_once "../CrudMasvendidos.php";
 <li><a href="Promociones.php">Promociones</a></li>
 <li class="actual"><a href="Mas vendidos.php">Mas vendidos</a></li>
 <li><a href="Foro.php">Foro</a></li>
-<li><a href="nosotros.html">Nosotros</a></li>
+<li><a href="nosotros.php">Nosotros</a></li>
 </ul>
 </nav>
   </div>
@@ -40,7 +40,7 @@ include_once "../CrudMasvendidos.php";
 <section id="main">
 <div class="contenedor">
 <article id="main_col">
-<h2 style="font-size: 30px">Mas vendidos</h2>
+
 <ul style="padding: 20px" id="servicios">
 
 <li>

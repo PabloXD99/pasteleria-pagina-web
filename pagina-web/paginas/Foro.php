@@ -1,5 +1,5 @@
 <?php
-include_once '../CrudUsuario.php';
+include_once '../CrudForo.php';
 ?>
 
 
@@ -10,7 +10,7 @@ include_once '../CrudUsuario.php';
 <meta name="description" content="La Casa del Pastel">
 <meta name="keywords" content="Para Endulzar Tus Sueños Estamos Nosotros">
 <meta name="author" content="Render2web">
-    <title>"LA ABUELITA" | REGISTRO</title>
+    <title>"LA ABUELITA" | Foro</title>
     <link rel="stylesheet" href="../css/estilos.css">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -32,7 +32,7 @@ include_once '../CrudUsuario.php';
 <li><a href="Promociones.php">Promociones</a></li>
 <li><a href="Mas vendidos.php">Mas vendidos</a></li>
 <li class="actual"><a href="Foro.php">Foro</a></li>
-<li><a href="nosotros.html">Nosotros</a></li>
+<li><a href="nosotros.php">Nosotros</a></li>
 </ul>
 </nav>
 </div>
@@ -51,58 +51,48 @@ include_once '../CrudUsuario.php';
 <section id="main">
 <div class="contenedor">
 <article id="main_col">
-<h2 style="font-size: 30px">Foro (aun sin funcionar)</h2>
+
 <ul style="padding: 20px" id="servicios" >
 
 <li>
     <!-- ******************* ENTRADA DE DATOS ****************************** -->
 <div class="container-fluid ">
-  
-  <h2 class="text-center">Nuevo registro</h2>
+<h2 class="text-center">Foro</h2>
+ <!-- <h2 class="text-center">Nuevo registro</h2> -->
   <form method="post">
      <div class="form-group">
-         <label class="control-label">Nombre:</label>
+         <label class="control-label">Autor:</label>
         <div class="col bg-info">
-          <input type="text" class="form-control" name="nomusuario" placeholder="NOMBRE"
+          <input type="text" class="form-control" name="nomautor" placeholder="Nombre del autor"
             value="<?php
                        if(isset($_GET['editar']))
-                       echo $getROW['nombre'];  
+                       echo $getROW['autor'];  
                    ?>" />
         </div>
      </div>
 
     <!-- CREACION -->
     <div class="form-group">
-        <label class="control-label">Correo:</label>
+        <label class="control-label">Titulo:</label>
        <div class="col bg-info">
-         <input type="text" class="form-control" name="corrusuario" placeholder="CORREO"
+         <input type="text" class="form-control" name="nomtitulo" placeholder="200 caracteres"
            value="<?php
                       if(isset($_GET['editar']))
-                      echo $getROW['correo'];  
+                      echo $getROW['titulo'];  
                   ?>" />
        </div>
     </div>
     <!-- FIN DE CREACION -->
 
     <div class="form-group">
-       <label class="control-label">Contraseña:</label>
+       <label class="control-label">Mensaje:</label>
        <div class="col">
-          <input type="text" class="form-control" name="contrausuario" placeholder="CONTRASEÑA"
+          <input type="text" class="form-control" name="nommensaje" placeholder="Describa..."
           value="<?php if(isset($_GET['editar']))
-                       echo $getROW['contrasenia']; 
+                       echo $getROW['mensaje']; 
            ?>"/>
        </div>
-
        </div>
-        <div class="form-group">
-       <label class="control-label">Teléfono:</label>
-       <div class="col">
-          <input type="text" class="form-control" name="telusuario" placeholder="FORMATO: 9851125436"
-          value="<?php if(isset($_GET['editar']))
-                       echo $getROW['telefono'];
-                        ?>" />
-       </div>
-    </div>
 
     <div class="form-group">        
        <?php
@@ -118,7 +108,7 @@ include_once '../CrudUsuario.php';
      {
       ?>
       <div class="col-12">       
-        <button type="submit" class="btn btn-primary" name="guardar">Guardar</button>
+        <button type="submit" class="btn btn-primary" name="guardar">Enviar</button>
       </div>
       <?php
      }
@@ -130,40 +120,38 @@ include_once '../CrudUsuario.php';
 <!-- INICIO DE TABLA-->
 <table class="table table-hover table-bordered shadow p-3 mb-5 bg-white rounded">
    <tr>
-       <th>Id</th>
-       <th>Nombre</th>
-       <th>Correo</th>
-       <th>Contraseña</th>
-       <th>Teléfono</th>
 
-       <th>Acciones</th>
+       <th class="text-center">Autor</th>
+       <th class="text-center">Titulo</th>
+       <th class="text-center">Mensaje</th>
+       <!--- <th>Acciones</th> --->
+       
       
     </tr>
 
    <?php
 
-   $res = $MySQLiconn->query("SELECT * FROM usuario");
+   $res = $MySQLiconn->query("SELECT * FROM Foro");
    while($row=$res->fetch_array()) {
     ?>
        <tr>
-         <td><?php echo $row['idusuario']; ?></td>
-         <td><?php echo $row['nombre']; ?></td>
-         <td><?php echo $row['correo']; ?></td>
-         <td><?php echo $row['contrasenia']; ?></td>
-         <td><?php echo $row['telefono']; ?></td>
+         <td class="text-center"><?php echo $row['autor']; ?></td>
+         <td class="text-center"><?php echo $row['titulo']; ?></td>
+         <td class="text-center"><?php echo $row['mensaje']; ?></td>
          
          <td> <!-- para las acciones -->
            <a href="?editar=<?php
-            echo $row['idusuario'];
+            echo $row['idforo'];
              ?>" onclick="return confirm('¿Deseas Editarlo ?'); ">
 
-             <span class="glyphicon  glyphicon glyphicon-pencil"></span>
-
+             <span ></span>
+             <!-- class="glyphicon  glyphicon glyphicon-pencil" -->
            </a>
 
-           <a href="?eliminar=<?php echo $row['idusuario']; ?>" onclick="return confirm('¿Seguro deseas eliminarlo?'); "
+           <a href="?eliminar=<?php echo $row['idforo']; ?>" onclick="return confirm('¿Seguro deseas eliminarlo?'); "
             >
-             <span class="glyphicon  glyphicon glyphicon-trash"></span>
+             <span ></span>
+             <!-- class="glyphicon  glyphicon glyphicon-trash" -->
          </a>
        </td> 
        </tr>

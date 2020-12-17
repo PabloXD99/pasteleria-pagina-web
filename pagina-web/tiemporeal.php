@@ -20,7 +20,7 @@
 <li class="actual"><a href="servicios.html">Servicios</a></li>
 <li><a href="registrousuario.php">Registro</a></li>
 <li><a href="chat.html">Chat</a></li>
-<li><a href="nosotros.html">Nosotros</a></li>
+<li><a href="nosotros.php">Nosotros</a></li>
 </ul>
 </nav>
 </div>

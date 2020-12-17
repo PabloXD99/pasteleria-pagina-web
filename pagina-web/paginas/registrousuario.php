@@ -32,7 +32,7 @@ include_once '../CrudUsuario.php';
 <li><a href="Promociones.php">Promociones</a></li>
 <li><a href="Mas vendidos.php">Mas vendidos</a></li>
 <li><a href="Foro.php">Foro</a></li>
-<li><a href="nosotros.html">Nosotros</a></li>
+<li><a href="nosotros.php">Nosotros</a></li>
 </ul>
 </nav>
 </div>
