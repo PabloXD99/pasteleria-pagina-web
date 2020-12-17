@@ -28,7 +28,7 @@ include_once '../CrudProductos.php';
 <nav>
 <ul>
 <li><a href="../index.html">Inicio</a></li>
-<li class="actual"><a href="servicios.html">Servicios</a></li>
+<li class="actual"><a href="servicios.php">Servicios</a></li>
 <li><a href="registrousuario.php">Registro</a></li>
 <li><a href="chat.html">chat</a></li>
 <li><a href="Promociones.php">Promociones</a></li>
